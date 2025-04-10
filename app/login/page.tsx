@@ -25,7 +25,7 @@ export default function LoginPage() {
 
   const handleLogin = () => {
     // Use the exact URL format from your example
-    const loginUrl = `https://${COGNITO_DOMAIN}/login?client_id=${CLIENT_ID}&response_type=code&scope=email+openid&redirect_uri=${encodeURIComponent(REDIRECT_URI)}`
+    const loginUrl = `https://us-east-10niwxuec0.auth.us-east-1.amazoncognito.com/login?client_id=3ejtntva2t08gh0a8kucibqdit&redirect_uri=https://main.d2q7i65xnfoc1c.amplifyapp.com&response_type=code&scope=email+openid`
     console.log("Redirecting to:", loginUrl)
     window.location.href = loginUrl
   }
