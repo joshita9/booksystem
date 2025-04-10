@@ -10,7 +10,7 @@ import { getCookie } from "@/lib/auth"
 // AWS Cognito configuration with your provided details
 const COGNITO_DOMAIN = "us-east-10niwxuec0.auth.us-east-1.amazoncognito.com"
 const CLIENT_ID = "3ejtntva2t08gh0a8kucibqdit"
-const REDIRECT_URI = "https://main.d2q7i65xnfoc1c.amplifyapp.com"
+const REDIRECT_URI = "https://main.d2q7i65xnfoc1c.amplifyapp.com/auth/callback"
 
 export default function LoginPage() {
   const router = useRouter()
