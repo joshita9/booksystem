@@ -7,7 +7,7 @@ import { getCookie } from "@/lib/auth"
 // Cognito configuration for Add Book feature
 const COGNITO_DOMAIN = "us-east-10bh2ricil.auth.us-east-1.amazoncognito.com"
 const CLIENT_ID = "5f9uq8bi165es9rjpffnevjdcp"
-const REDIRECT_URI = "http://localhost:3000/add-book"
+const REDIRECT_URI = "https://main.d2q7i65xnfoc1c.amplifyapp.com/add-book"
 
 export default function AddBookButton() {
   const handleAddBook = () => {
@@ -19,7 +19,7 @@ export default function AddBookButton() {
       window.location.href = "/add-book"
     } else {
       // Otherwise, redirect to Cognito login
-      const loginUrl = `https://${COGNITO_DOMAIN}/login?client_id=${CLIENT_ID}&response_type=code&scope=email+openid+phone&redirect_uri=${encodeURIComponent(REDIRECT_URI)}`
+      const loginUrl = `https://us-east-10bh2ricil.auth.us-east-1.amazoncognito.com/login?client_id=5f9uq8bi165es9rjpffnevjdcp&response_type=code&scope=email+openid+phone&redirect_uri=https%3A%2F%2Fmain.d2q7i65xnfoc1c.amplifyapp.com%2Fadd-book`
       console.log("Redirecting to Cognito for Add Book:", loginUrl)
       window.location.href = loginUrl
     }
